@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next Station</title>
+    <!-- BOOTSTRAP5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOOTSTRAP-ICON LIBRARY -->
+
+    <!-- CSS Always use bootstrap cdn before css and that way you don't have to use !important  and do not use it. -->
+    <link rel="stylesheet" href="style.css" />
+    <!--FAV-ICON-->
+    <link rel="shortcut icon" href="assets/fav-icon.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- WHATSAPP CLICK TO CHAT -->
+    <div class="whatsapp-chat">
+      <a target="_blank" href="https://wa.me/+918595333353"
+        ><img
+          class="img-fluid"
+          height="56"
+          width="56"
+          src="assets/whatsapp.png"
+          alt=""
+          srcset=""
+      /></a>
+    </div>
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5 primary-color fw-bold"
+              id="exampleModalLabel"
+            >
+              Contact Details
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="">
+              <input type="hidden" name="_next" value="/submit" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="You got a new form submission!!"
+              />
+              <div class="form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                  aria-label="Domestic"
+                  id="validationCustom01"
+                  required
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Domestic
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                  aria-label="International"
+                  id="validationCustom02"
+                  required
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  International
+                </label>
+              </div>
+
+              <div class="row">
+                <div class="form-floating my-3 col">
+                  <input
+                    name="NameOfPerson"
+                    type="text"
+                    class="form-control rounded-3"
+                    id="floatingName"
+                    placeholder="John doe"
+                    aria-label="First name"
+                    id="validationCustom07"
+                    required
+                  />
+                  <label class="ms-3" for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating my-3 col">
+                  <input
+                    name="Contact-Number"
+                    type="tel"
+                    class="form-control rounded-3"
+                    id="floatingNumber"
+                    placeholder="+919891235468"
+                    aria-label="Contact Number"
+                    id="ContactNumber"
+                    pattern="[789][0-9]{9}"
+                    required
+                  />
+                  <label class="ms-3" for="floatingInput">Contact Number</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-group col">
+                  <select
+                    class="form-select rounded-start-3"
+                    id="inputGroupSelect02"
+                    aria-label="Number-of-guests"
+                    id="validationCustom03"
+                    required
+                  >
+                    <option selected>Number</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+                    <option value="6">Six</option>
+                  </select>
+                  <label class="input-group-text" for="inputGroupSelect02"
+                    >Guests</label
+                  >
+                </div>
+                <div class="form-floating col">
+                  <input
+                    type="text"
+                    class="form-control rounded-3"
+                    id="floatingDestination"
+                    placeholder="Shimla"
+                    aria-label="Name-of-Destination"
+                    id="validationCustom04"
+                    required
+                  />
+                  <label class="ms-3" for="floatingInput"
+                    >Your Destination</label
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-floating my-3 col">
+                  <input
+                    id="date"
+                    type="date"
+                    class="form-control rounded-3"
+                    id="floatingDate"
+                    placeholder="John doe"
+                    aria-label="Date-of-Departure"
+                    id="validationCustom05"
+                    required
+                  />
+                  <label class="ms-3" for="floatingInput"
+                    >Date of Departure</label
+                  >
+                </div>
+                <div class="form-floating my-3 col">
+                  <input
+                    id="date"
+                    type="date"
+                    class="form-control rounded-3"
+                    id="floatingDate"
+                    placeholder="Date"
+                    aria-label="Date-of-Return"
+                    id="validationCustom06"
+                    required
+                  />
+                  <label class="ms-3" for="floatingInput">Date of Return</label>
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  name="Email-Address"
+                  type="email"
+                  class="form-control rounded-3"
+                  id="floatingInput"
+                  placeholder="johndoe@gmail.com"
+                  aria-label="email address"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  required
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <button
+                class="modal-btn w-100 mb-2 btn btn-lg rounded-3"
+                type="submit"
+              >
+                Get Quote
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+<div>
+    <nav class="navbar navbar-expand-lg" aria-label="Offcanvas navbar large">
+        <div class="container-fluid mx-lg-5">
+          <a  href="" class="navbar-brand">
+           <img src="assets//company-logo-2-dark.svg" alt="" srcset="">
+          </a>
+             <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2"
+                aria-label="Toggle navigation"
+              > <img src="assets/hamburger-menu-broken.svg" alt="">
+                <span class="navbar-toggler-icon d-none">
+                 
+                </span>
+              </button>
+              <div
+                class="offcanvas offcanvas-end text-bg-light"
+                tabindex="-1"
+                id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
+                    Next Station
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-dark"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body navbar-collapse">
+                  <ul class="navbar-nav nav mx-auto center-nav">
+                    <li class="nav-item">
+                      <a href="#home" class="nav-link ps-lg-5 pe-lg-2 link-light">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#featured-3" class="nav-link px-lg-4 link-light">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#how" class="nav-link ps-lg-2 pe-lg-5 link-light">How it works</a>
+                    </li>
+                  </ul>
+                  <ul class="navbar-nav nav">
+                    <li class="nav-item">
+                      <button type="button" class="btn call-to-action px-3 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Quote</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+</div>
+   
+
+<div class="container text-center">
+    <img src="assets/Travel insurance-pana.svg" class="img-fluid w-25" alt="">
+    <h1 class="fw-bold primary-color">Thank you !</h1>
+   <div class="row text-center justify-content-center">
+    <p style="color: #848484;" class="col-lg-5 col-md-5">Thank you for sharing your travel details with us! We'll be in touch shortly to assist you further. Stay tuned!</p>
+   </div>
+   <a href="https://nextstation.in"  class="goback-btn btn px-5 py-2 mt-2">Go to home</a>
+    </div>
+
+
+
+
+  </body>
+</html>

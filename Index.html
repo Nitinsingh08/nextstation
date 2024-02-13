@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next Station</title>
+    <!-- BOOTSTRAP5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP-ICON LIBRARY -->
+
+    <!-- CSS Always use bootstrap cdn before css and that way you don't have to use !important  and do not use it. -->
+    <link rel="stylesheet" href="style.css" />
+    <!--FAV-ICON-->
+    <link rel="shortcut icon" href="assets/fav-icon.svg" type="image/x-icon">
+  </head>
+  <body>
+
+     <!-- WHATSAPP CLICK TO CHAT -->
+     <div class="whatsapp-chat">
+      <a target="_blank" href="https://wa.me/+918595333353"
+        ><img
+          class="img-fluid"
+          height="56"
+          width="56"
+          src="assets/whatsapp.png"
+          alt=""
+          srcset=""
+      /></a>
+    </div>
+   
+    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 primary-color fw-bold" id="exampleModalLabel">Contact Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="" target="_blank" method="POST" action="">
+          <input type="hidden" name="_captcha"  value="false">
+          <input type="hidden" name="_next" value="/submit" />
+          <input type="hidden" name="_next" value="https://nextstation.in/thankyou.html">
+          <input type="hidden" name="_subject" value="You got a new form submission!!" />
+          <div class="form-check-inline">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" aria-label="Domestic"
+            id="validationCustom01"
+            required>
+            <label class="form-check-label" for="flexRadioDefault1">
+              Domestic
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked aria-label="International"
+            id="validationCustom02"
+            required>
+            <label class="form-check-label" for="flexRadioDefault2">
+              International
+            </label>
+          </div>
+          
+         
+          <div class="row">
+            <div class="form-floating my-3 col">
+              <input name="NameOfPerson" type="text" class="form-control rounded-3" id="floatingName" placeholder="John doe"  aria-label="First name"
+              id="validationCustom07"
+              required >
+              <label class="ms-3" for="floatingInput">Name</label>
+            </div>
+            <div class="form-floating my-3 col">
+              <input name="Contact-Number" type="tel" class="form-control rounded-3" id="floatingNumber" placeholder="+919891235468" aria-label="Contact Number"
+              id="ContactNumber"
+              pattern="[789][0-9]{9}"
+              required>
+              <label class="ms-3" for="floatingInput">Contact Number</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group col">
+              <select class="form-select rounded-start-3" id="inputGroupSelect02"  aria-label="Number-of-guests"
+              id="validationCustom03"
+              required>
+                <option selected>Number</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+                <option value="6">Six</option>
+                <option value="7">Seven</option>
+                <option value="8">Eight</option>
+                <option value="9">Nine</option>
+                <option value="10">Ten</option>
+              </select>
+              <label class="input-group-text" for="inputGroupSelect02">Guests</label>
+            </div>
+            <div class="form-floating col">
+              <input type="text" class="form-control rounded-3" id="floatingDestination" placeholder="Shimla"  aria-label="Name-of-Destination"
+              id="validationCustom04"
+              required>
+              <label class="ms-3" for="floatingInput">Your Destination</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-floating my-3 col">
+              <input id="date" type="date" class="form-control rounded-3" id="floatingDate" placeholder="John doe"  aria-label="Date-of-Departure"
+              id="validationCustom05"
+              required>
+              <label class="ms-3" for="floatingInput">Date of Departure</label>
+            </div>
+            <div class="form-floating my-3 col">
+              <input id="date" type="date" class="form-control rounded-3" id="floatingDate" placeholder="Date"  aria-label="Date-of-Return"
+              id="validationCustom06"
+              required>
+              <label class="ms-3" for="floatingInput">Date of Return</label>
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <input name="Email-Address" type="email" class="form-control rounded-3" id="floatingInput" placeholder="johndoe@gmail.com"  aria-label="email address"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            required>
+            <label for="floatingInput">Email address</label>
+          </div>
+          <button class="modal-btn w-100 mb-2 btn btn-lg rounded-3" type="submit">Get Quote</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="home" class="home-page">
+ <!-- NAVIGATION-BAR-START -->
+ <nav class="navbar navbar-expand-lg" aria-label="Offcanvas navbar large">
+    <div class="container-fluid mx-lg-5">
+      <a  href="#home" class="navbar-brand">
+       <img src="assets/company-logo-1.svg" alt="" srcset="">
+      </a>
+         <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar2"
+            aria-controls="offcanvasNavbar2"
+            aria-label="Toggle navigation"
+          > <img src="assets/hamburger-menu-broken.svg" alt="">
+            <span class="navbar-toggler-icon d-none">
+             
+            </span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end side-navigation"
+            tabindex="-1"
+            id="offcanvasNavbar2"
+            aria-labelledby="offcanvasNavbar2Label"
+          >
+            <div class="offcanvas-header">
+              <a  href="#home" class="navbar-brand">
+                <img src="assets/company-logo-3-light.svg" alt="" srcset="">
+               </a>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body navbar-collapse">
+              <ul class="center-navs navbar-nav nav mx-auto center-nav">
+                <li class="nav-item">
+                  <a href="#home" class="nav-link ps-lg-5 pe-lg-2 link-light">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#featured-3" class="nav-link px-lg-4 link-light">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#how" class="nav-link ps-lg-2 pe-lg-5 link-light">How it works</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav nav">
+                <li class="nav-item">
+                  <a class="link-body-emphasis mx-lg-3 mx-md-3" target="_blank" href="https://www.instagram.com/nextstationindia?igsh=ZnFkMXpxeXp1azBp"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#FBE20A"/> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#FBE20A"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#FBE20A"/> </g>
+                    </svg></a>
+                  <button type="button" class="btn call-to-action px-3 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Quote</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- NAVIGTION-BAR-END -->
+          <div class="px-4 py-5 my-5 text-center home-page-content align-items-center align-self-center justify-content-center">
+            <div class="row justify-content-center">
+              <h1 class="headline col-lg-7 align-self-center align-items-center">Discover your favorite place with us</h1>
+              <p class="sub-headline lead col-lg-6 mt-2 text-white">Embark on Unforgettable Adventures: Discover Dream Destinations, Expert Guidance, and Tailored Experiences</p>
+              </div>
+              <p class="mobile col-lg-6 mt-1 text-white">Explore the World: Ultimate Travel Experience Awaits!</p>
+           
+            <button type="button" class="btn main-button px-5 py-2 mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal"> Get Quote</button>
+          </div>
+      </div>
+
+
+      <!-- FEATURE SECTION -->
+
+      <div class="feature-section container-fluid px-5 py-5" id="featured-3">
+        <h2 class="pb-2 text-center primary-color">Our Features</h2>
+
+        <div class="row g-4 py-5 row-cols-1 justify-content-center">
+          <div class="feature col-lg-3 pt-4 py-4 ps-4 pe-4 me-lg-5">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-3">
+              <img class="mb-2" src="assets/icon-1.svg" alt="" srcset="">
+            </div>
+            <h5>Dynamic Packages</h5>
+            <p class="mb-0">Tailor-made itineraries, flexible options, real-time pricing: your personalized travel experience awaits!</p>
+          </div>
+          <div class="feature col-lg-3 pt-4 py-4 ps-4 pe-4 me-lg-5 ms-lg-2">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-3">
+              <img class="mb-2" src="assets/icon-2.svg" alt="" srcset="">
+            </div>
+            <h5>Instant Itinerary</h5>
+            <p class="mb-0">Effortlessly plan trips with our Instant Itinerary feature - instant convenience!</p>
+          </div>
+          <div class="feature col-lg-3 pt-4 py-4 ps-lg-4 pe-4 ms-lg-2">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-3">
+              <img class="mb-2" src="assets/icon-3.svg" alt="" srcset="">
+            </div>
+            <h5>24/7 Support</h5>
+            <p class="mb-0">24/7 support ensures assistance anytime, anywhere, for seamless travel experiences.</p>
+          </div>
+          
+        
+        </div>
+      </div>
+
+       <!-- FEATURE SECTION END-->
+
+    
+      <!-- How-it-works-section -->
+<div id="how" class="how-it-works-section container py-5 px-3 px-lg-0 px-md-0">
+  <div class="row g-5 justify-content-center">
+    <div class="col-6 img-column">
+      <img class="how-it-works" src="assets/how-it-works-img.png" alt="">
+    </div>
+    <div class="col-lg-6 align-self-center">
+      <p class="mb-0 sub-head orange-color">How it works</p>
+      <h2 class="primary-color">One Click for you</h2>
+      <div class="step-container mt-4 mb-5">
+        <div class="d-flex" class="icon-box">
+          <img class="align-self-start me-3" src="assets/find.svg" alt="" srcset="">
+          <div class="">
+            <h5 class="d-flex font-bold mb-1">Find your destination</h5>
+            <p class="col-12 mb-0">Explore diverse destinations effortlessly with our guidance, making it easy to travel freely.</p>
+          </div>
+        </div>
+      </div>
+      <div class="step-container mb-5 mt-2">
+        <div class="d-flex" class="icon-box">
+          <img class="align-self-start me-3 img-fluid" src="assets/message.svg" alt="" srcset="">
+          <div class="">
+            <h5 class="d-flex font-bold mb-1">Get a quote from us</h5>
+            <p class="col-12 mb-0">
+              Receive customized quotes promptly through our user-friendly interface, simplifying your travel planning process.</p>
+          </div>
+        </div>
+      </div>
+      <div class="step-container mb-5 mt-2">
+        <div class="d-flex" class="icon-box">
+          <img class="align-self-start me-3 img-fluid" src="assets/payment-card.svg" alt="" srcset="">
+          <div class="">
+            <h5 class="d-flex font-bold mb-1">Make payment</h5>
+            <p class="col-12 mb-0">Securely complete transactions , ensuring smooth payment processing for your travel arrangements hassle-free.</p>
+          </div>
+        </div>
+      </div>
+      <div class="step-container mt-2">
+        <div class="d-flex" class="icon-box">
+          <img class="align-self-start me-3 img-fluid" src="assets/explore.svg" alt="" srcset="">
+          <div class="">
+            <h5 class="d-flex font-bold mb-1">Explore your destination</h5>
+            <p class="col-12 mb-0">Discover your ideal destination with ease through our comprehensive guides for unforgettable experiences.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<!-- PACKAGES-SECTION -->
+<div class="package-section container py-5 px-3 px-lg-0 px-md-0">
+  <p class="mb-0 tour orange-color">Tour Packages</p>
+  <div class="headline-box ">
+    <h2 class="primary-color">Our Tourist destination</h2>
+  </div>
+
+<div class="row">
+  <p class="col-12 mt-4 mb-3"><img src="assets/Line-icon.svg" alt="" srcset=""> Domestic</p>
+  <div class="col-lg-4">
+    <img class="pgk-img package-box-shadow border-radius img-fluid" src="assets/kashmir.svg" alt="" srcset="">
+  </div>
+  <div class="col-lg-4">
+    <img class="pgk-img margin-top package-box-shadow border-radius img-fluid" src="assets/Goa.svg" alt="" srcset="">
+  </div>
+  <div class="col-lg-4">
+    <img class="pgk-img margin-top package-box-shadow border-radius img-fluid" src="assets/Uttarakhand.svg" alt="" srcset="">
+  </div>
+</div>
+
+<div class="row">
+  <p class="col-12 mt-5 mb-4"><img src="assets/Line-icon.svg" alt="" srcset=""> International</p>
+  <div class="col-lg-4">
+    <img class="pgk-img package-box-shadow border-radius img-fluid" src="assets/dubai.svg" alt="" srcset="">
+  </div>
+  <div class="col-lg-4">
+    <img class="pgk-img margin-top package-box-shadow border-radius img-fluid" src="assets/singapore.svg" alt="" srcset="">
+  </div>
+  <div class="col-lg-4">
+    <img class="pgk-img margin-top package-box-shadow border-radius img-fluid" src="assets/bangkok.svg" alt="" srcset="">
+  </div>
+</div>
+</div>
+
+<!-- FOOTER-SECTION -->
+<div class="primary-color footer-section pt-4 pb-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+          <img src="assets/company-logo-1.svg" alt="" srcset="">
+        </a>
+        <p  class="col-11 mt-1">we always make our customer happy by providing as many choices as possible</p>
+        <ul class="list-unstyled d-flex">
+          <li class=""><a class="link-body-emphasis" target="_blank" href="https://www.instagram.com/nextstationindia?igsh=ZnFkMXpxeXp1azBp"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+            <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#FBE20A"/> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#FBE20A"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#FBE20A"/> </g>
+            </svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" target="_blank" href="https://www.facebook.com/profile.php?id=61556131590925&mibextid=ZbWKwL"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>           
+            <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H12V13H11C10.4477 13 10 12.5523 10 12C10 11.4477 10.4477 11 11 11H12V9.5C12 7.567 13.567 6 15.5 6H16.1C16.6523 6 17.1 6.44772 17.1 7C17.1 7.55228 16.6523 8 16.1 8H15.5C14.6716 8 14 8.67157 14 9.5V11H16.1C16.6523 11 17.1 11.4477 17.1 12C17.1 12.5523 16.6523 13 16.1 13H14V20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6Z" fill="#FBE20A"/> </g>           
+            </svg></a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-2 ps-lg-0 ps-md-0 align-self-start align-items-center margin-top">
+        <h5 class="white-color">Menu</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#home" class=" p-0 text-decoration-underline">Home</a></li>
+          <li class="nav-item mb-2"><a href="#featured-3" class=" p-0 text-decoration-underline">About</a></li>
+          <li class="nav-item mb-2"><a href="#how" class=" p-0 text-decoration-underline">How it works</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-2 ps-lg-0 ps-md-0 margin-top">
+        <div class="col">
+          <h5 class="white-color">Contact us</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="mailto:info@nextstation.in" class=" p-0 text-decoration-underline">info@nextstation.in</a></li>
+            <li class="nav-item mb-2"><a href="tel:+91 8851808499" class=" p-0 text-decoration-underline">+91 8851808499</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="col-lg-4 col-md-4 margin-top">
+        <div class="col mb-3">
+          <h5 class="white-color">Get in touch</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><p href="#" class="white-color p-0">Question or Feedback  , Feel free to contact us for customer support or any other query</p></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-lg-4 my-md-4 my-0">
+    </div>
+  
+  </div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
